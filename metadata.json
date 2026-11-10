@@ -1,0 +1,8 @@
+{
+  "name": "AetherHardware | Flagship Spec Exchange & Enthusiast E-Commerce",
+  "description": "Next-generation enthusiast e-commerce platform featuring real-time inventory tracking, deep hardware specification comparisons, multi-currency processing, and expert buying guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
