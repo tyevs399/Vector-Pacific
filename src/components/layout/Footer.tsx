@@ -12,12 +12,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Brand & Purpose */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold tracking-wider">
+            <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold tracking-wider font-mono">
               <span className="w-2.5 h-2.5 rounded-sm bg-amber-500 inline-block transform rotate-45" />
-              <span>AETHER//HARDWARE</span>
+              <span>VECTOR PACIFIC</span>
             </div>
             <p className="text-slate-500 font-sans leading-relaxed text-xs">
-              Direct enthusiast hardware exchange. Verified continuous TGP power limits, Hall effect input physics, and calibrated QD-OLED optics.
+              West Coast enthusiast hardware exchange. Verified continuous TGP power limits, Hall effect input physics, and calibrated QD-OLED optics.
             </p>
           </div>
 
@@ -77,6 +77,12 @@ export const Footer: React.FC = () => {
               >
                 Administrative Performance Dashboard
               </button>
+              <button
+                onClick={() => setActiveModal('logo_suite')}
+                className="text-left hover:text-amber-500 transition-colors text-amber-500/90 font-bold"
+              >
+                Vector Pacific Logo Suite & Identity
+              </button>
             </div>
           </div>
         </div>
@@ -84,7 +90,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar: Quiet Copyright */}
         <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
           <div>
-            © 2026 AetherHardware Global Systems. All hardware trademarks property of their respective manufacturers.
+            © 2026 Vector Pacific Global Systems. All hardware trademarks property of their respective manufacturers.
           </div>
           <div className="flex items-center gap-4 text-slate-500">
             <span>PCI-DSS Tier 1 Compliant</span>

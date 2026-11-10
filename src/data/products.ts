@@ -599,6 +599,265 @@ export const INITIAL_PRODUCTS: Product[] = [
         date: '2026-10-12'
       }
     ]
+  },
+  {
+    id: 'raspberry-pi-5-8gb',
+    name: 'Raspberry Pi 5 (8GB) Official Flagship Kit',
+    slug: 'raspberry-pi-5-8gb',
+    brand: 'Raspberry Pi',
+    category: 'sbc',
+    price: 119,
+    originalPrice: 135,
+    releaseYear: 2026,
+    badge: 'Hardware SBC Apex',
+    image: '/src/assets/images/raspberry_pi_5_1794348153186.jpg',
+    gallery: [
+      '/src/assets/images/raspberry_pi_5_1794348153186.jpg'
+    ],
+    rating: 4.9,
+    reviewCount: 142,
+    stockCount: 18,
+    warehouse: 'US West (NV-01)',
+    restockEtaMinutes: null,
+    shortSummary: 'The new standard in single-board computing with 2.4GHz quad-core ARM Cortex-A76, PCIe 2.0 NVMe expansion, and active cooling.',
+    description: 'Boasting 2–3x the processing power of its predecessor, the Raspberry Pi 5 8GB is engineered on Broadcom’s BCM2712 silicon. It introduces an on-board PCIe 2.0 interface for blazing-fast NVMe solid-state storage, dual 4Kp60 micro-HDMI outputs with HDR support, and custom RP1 I/O southbridge delivering 5Gbps USB throughput.',
+    specs: {
+      cpu: 'Broadcom BCM2712 (Quad-core 64-bit Arm Cortex-A76 @ 2.4 GHz, 512KB L2 per core, 2MB shared L3)',
+      gpu: 'VideoCore VII GPU @ 800 MHz (OpenGL ES 3.1, Vulkan 1.2)',
+      ram: '8GB LPDDR4X-4267 High-Density SDRAM',
+      storage: 'MicroSD slot with SDR104 support + PCIe 2.0 x1 FPC (Supports M.2 NVMe SSD HAT)',
+      cooling: 'Official Raspberry Pi Active Cooler (Aluminum Heatsink + PWM Blower Fan)',
+      weightKg: 0.065,
+      connectivity: ['Dual 4Kp60 micro-HDMI', 'PCIe 2.0 x1 FPC', '2x USB 3.0 (5Gbps simultaneous)', '2x USB 2.0', 'Gigabit Ethernet PoE+', 'Wi-Fi 5 (802.11ac)', 'Bluetooth 5.0 BLE', '40-pin GPIO']
+    },
+    benchmarks: {
+      geekbenchSingle: 795,
+      geekbenchMulti: 1740,
+      overallScore: 94
+    },
+    priceHistory: [
+      { date: 'Oct 01', price: 135 },
+      { date: 'Oct 20', price: 125 },
+      { date: 'Nov 01', price: 119 }
+    ],
+    expertVerdict: {
+      verdict: 'The desktop-class microcomputer revolution. With PCIe NVMe enabled, cold-boots Raspberry Pi OS in under 4 seconds.',
+      pros: [
+        'PCIe lane enables >800MB/s NVMe storage throughput via M.2 HAT',
+        'Official active cooler keeps BCM2712 under 58°C even under full compiler saturation',
+        'Dual 4Kp60 display support transforms it into a viable lightweight workstation'
+      ],
+      cons: [
+        'Requires 27W 5V/5A USB-PD power supply for full 1.6A USB peripheral current'
+      ],
+      bestFor: 'Self-hosting home labs, edge computing, robotics, and hardware automation architects.'
+    },
+    reviews: [
+      {
+        id: 'rev-pi-1',
+        productId: 'raspberry-pi-5-8gb',
+        author: 'Julian Thorne',
+        role: 'Edge Computing Architect',
+        rating: 5,
+        title: 'Running 12 Docker containers and Home Assistant with 0 lag',
+        comment: 'Paired this with an NVMe boot drive via the M.2 HAT. Read speeds hit 850 MB/s. Memory headroom with 8GB is massive for local Ollama LLM testing.',
+        verifiedBuyer: true,
+        testRig: 'Tested with: 1TB Samsung 980 NVMe + 27W Official PSU',
+        helpfulCount: 53,
+        date: '2026-11-04'
+      }
+    ]
+  },
+  {
+    id: 'raspberry-pi-ai-kit',
+    name: 'Raspberry Pi 5 AI Kit (13 TOPS Hailo-8L + M.2 HAT+)',
+    slug: 'raspberry-pi-ai-kit',
+    brand: 'Raspberry Pi',
+    category: 'sbc',
+    price: 189,
+    originalPrice: 215,
+    releaseYear: 2026,
+    badge: 'Neural Accelerator',
+    image: '/src/assets/images/raspberry_pi_ai_kit_1794348179468.jpg',
+    gallery: [
+      '/src/assets/images/raspberry_pi_ai_kit_1794348179468.jpg'
+    ],
+    rating: 4.8,
+    reviewCount: 46,
+    stockCount: 9,
+    warehouse: 'US West (NV-01)',
+    restockEtaMinutes: null,
+    shortSummary: 'Integrated neural network accelerator HAT packing 13 Tera-Operations per Second for real-time vision AI and object tracking.',
+    description: 'Transform your Raspberry Pi 5 into an industrial edge AI powerhouse. Features an M.2 2242 form-factor Hailo-8L AI accelerator module mounted on the Raspberry Pi M.2 HAT+. Delivers 13 TOPS of neural inference throughput for YOLOv8, pose estimation, and semantic segmentation with ultra-low thermal dissipation.',
+    specs: {
+      cpu: 'Hailo-8L Neural Processing Unit (NPU) @ 13 TOPS Compute Capacity',
+      ram: 'Shared with host Pi 5 (Optimized zero-copy frame buffer)',
+      storage: 'PCIe Gen 3.0 M.2 2242 Form Factor',
+      cooling: 'Direct-contact Aluminum Thermal Fin Block with Pre-applied Phase-Change Pad',
+      weightKg: 0.045,
+      connectivity: ['PCIe 3.0 x1 FPC interface', 'Raspberry Pi Camera Module 3 CSI Integration']
+    },
+    benchmarks: {
+      overallScore: 97
+    },
+    priceHistory: [
+      { date: 'Oct 15', price: 215 },
+      { date: 'Nov 01', price: 189 }
+    ],
+    expertVerdict: {
+      verdict: 'Phenomenal 13 TOPS inference efficiency. Executes YOLOv8 real-time object classification at 60 FPS while consuming under 2.5 Watts.',
+      pros: [
+        'Massive 13 TOPS compute density in a compact HAT format',
+        'Seamless integration with libcamera and Picamera2 frameworks',
+        'Pre-trained model zoo available out of the box with zero compiler friction'
+      ],
+      cons: [
+        'Dedicated to inference workloads (training still best executed on workstation GPUs)'
+      ],
+      bestFor: 'Computer vision engineers, autonomous robotics builders, and smart security architects.'
+    },
+    reviews: [
+      {
+        id: 'rev-pi-ai-1',
+        productId: 'raspberry-pi-ai-kit',
+        author: 'Dr. Marcus Vance',
+        role: 'Robotics Lab Director',
+        rating: 5,
+        title: '60 FPS multi-stream object tracking with cold thermals',
+        comment: 'Runs YOLOv8n at 60+ FPS on 1080p camera feed without burdening the Pi 5 Cortex-A76 cores. CPU usage sits at merely 12%. Game changer for embedded robotics.',
+        verifiedBuyer: true,
+        testRig: 'Tested with: Pi Camera Module 3 Wide + Pi 5 8GB',
+        helpfulCount: 31,
+        date: '2026-11-06'
+      }
+    ]
+  },
+  {
+    id: 'flipper-zero-multitool',
+    name: 'Flipper Zero Multi-Tool & Cyber Companion',
+    slug: 'flipper-zero-multitool',
+    brand: 'Flipper Devices',
+    category: 'cybersec',
+    price: 169,
+    originalPrice: 199,
+    releaseYear: 2026,
+    badge: 'Hardware Cyber Apex',
+    image: '/src/assets/images/flipper_zero_1794348166934.jpg',
+    gallery: [
+      '/src/assets/images/flipper_zero_1794348166934.jpg'
+    ],
+    rating: 4.9,
+    reviewCount: 310,
+    stockCount: 14,
+    warehouse: 'US West (NV-01)',
+    restockEtaMinutes: null,
+    shortSummary: 'The portable multi-tool for geeks and hardware penetration testers with Sub-1 GHz, RFID, NFC, Infrared, and GPIO expansion.',
+    description: 'The iconic cyber tool housed in an ultra-rugged shell with a cheerful cyber-dolphin personality. Flipper Zero combines Sub-1 GHz RF transceiver (300-928 MHz), 125 kHz RFID reader/emulator, 13.56 MHz NFC with full Mifare support, infrared transmitter with exhaustive appliance dictionary, and hardware GPIO headers for UART, SPI, and I2C exploration.',
+    specs: {
+      cpu: 'Dual-Core STM32WB55RG (ARM Cortex-M4 64MHz + Cortex-M0+ 32MHz dedicated radio core)',
+      display: '1.4" Sunlight-Readable Monochrome 128x64 LCD with Warm Orange Backlight (0.4W power)',
+      batteryWh: 7.77,
+      batteryHours: 168.0,
+      weightKg: 0.102,
+      connectivity: ['Sub-1 GHz CC1101 (300-928 MHz)', '125 kHz RFID', '13.56 MHz NFC', 'Infrared RX/TX', '18-pin 3.3V/5V GPIO Header', 'USB 2.0 Type-C (Virtual COM / DFU / HID)', 'Bluetooth 5.0 LE']
+    },
+    benchmarks: {
+      overallScore: 99
+    },
+    priceHistory: [
+      { date: 'Oct 01', price: 199 },
+      { date: 'Oct 20', price: 179 },
+      { date: 'Nov 01', price: 169 }
+    ],
+    expertVerdict: {
+      verdict: 'The Swiss Army knife of hardware protocol exploration. Intuitive tactile controls, rock-solid firmware, and open-source ecosystem.',
+      pros: [
+        'Unmatched protocol versatility: Sub-GHz, RFID, NFC, Infrared, and 1-Wire in one pocket device',
+        'Monochrome LCD provides flawless outdoor readability in direct sun with 7-day battery life',
+        'Thriving open-source community with endless firmware addons and expansion boards'
+      ],
+      cons: [
+        'Requires MicroSD card (FAT32) for storage of frequency files and payloads'
+      ],
+      bestFor: 'Cybersecurity researchers, hardware hackers, IoT developers, and access control auditors.'
+    },
+    reviews: [
+      {
+        id: 'rev-flip-1',
+        productId: 'flipper-zero-multitool',
+        author: 'Soren Lind',
+        role: 'Penetration Tester & Red Teamer',
+        rating: 5,
+        title: 'Essential everyday carry tool for physical security audits',
+        comment: 'Replaced an entire bag of bulky SDR dongles and RFID cloners. The built-in BadUSB engine and GPIO logic analyzer make bench testing effortless.',
+        verifiedBuyer: true,
+        testRig: 'Tested with: Official Silicone Bumper + 64GB SanDisk Extreme',
+        helpfulCount: 78,
+        date: '2026-10-30'
+      }
+    ]
+  },
+  {
+    id: 'flipper-zero-wifi-devboard',
+    name: 'Flipper Zero Wi-Fi Developer Board v1 (ESP32-S2)',
+    slug: 'flipper-zero-wifi-devboard',
+    brand: 'Flipper Devices',
+    category: 'cybersec',
+    price: 39,
+    originalPrice: 45,
+    releaseYear: 2026,
+    badge: 'Hardware Addon',
+    image: '/src/assets/images/flipper_wifi_board_1794348191469.jpg',
+    gallery: [
+      '/src/assets/images/flipper_wifi_board_1794348191469.jpg'
+    ],
+    rating: 4.8,
+    reviewCount: 92,
+    stockCount: 22,
+    warehouse: 'US West (NV-01)',
+    restockEtaMinutes: null,
+    shortSummary: 'Official expansion module equipped with ESP32-S2 for in-circuit debugging, wireless firmware flashing, and 2.4GHz Wi-Fi analysis.',
+    description: 'Designed specifically to snap into the Flipper Zero’s top GPIO header. Powered by the ESP32-S2 chipset, it enables in-system debugging via Black Magic Probe over USB-C, wireless over-the-air firmware upgrades, and 2.4GHz Wi-Fi penetration testing workflows with Marauder support.',
+    specs: {
+      cpu: 'Espressif ESP32-S2FN4R2 (32-bit LX7 single-core @ 240 MHz)',
+      ram: '2MB Embedded PSRAM + 4MB Flash',
+      weightKg: 0.024,
+      connectivity: ['802.11 b/g/n 2.4GHz Wi-Fi', 'USB Type-C (Native JTAG & CDC)', '18-pin Gold Plated Header']
+    },
+    benchmarks: {
+      overallScore: 96
+    },
+    priceHistory: [
+      { date: 'Oct 10', price: 45 },
+      { date: 'Nov 01', price: 39 }
+    ],
+    expertVerdict: {
+      verdict: 'The ultimate wireless companion for Flipper Zero. Flashing Marauder unlocks instant 2.4GHz packet inspection and deauth analysis.',
+      pros: [
+        'Direct GPIO plug-and-play fitment with zero soldering required',
+        'Onboard USB-C port provides instant PC debugging interface',
+        'Supports Black Magic Probe and open-source Marauder firmwares'
+      ],
+      cons: [
+        'Operates on 2.4GHz spectrum only (no 5GHz or 6GHz band)'
+      ],
+      bestFor: 'Wireless security researchers, ethical hackers, and ESP32 developers.'
+    },
+    reviews: [
+      {
+        id: 'rev-flip-wifi-1',
+        productId: 'flipper-zero-wifi-devboard',
+        author: 'Nico Ramos',
+        role: 'Network Defense Engineer',
+        rating: 5,
+        title: 'Flawless Marauder integration in seconds',
+        comment: 'Flashed Marauder via the web flasher in 60 seconds. Allows beacon sniffing, PMKID capture, and packet auditing with real-time feedback on Flipper’s screen.',
+        verifiedBuyer: true,
+        testRig: 'Tested with: Flipper Zero Firmware v0.98.3',
+        helpfulCount: 42,
+        date: '2026-11-05'
+      }
+    ]
   }
 ];
 

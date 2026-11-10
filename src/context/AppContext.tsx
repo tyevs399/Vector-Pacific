@@ -74,12 +74,14 @@ interface AppContextType {
   clearNotifications: () => void;
   addNotification: (title: string, message: string, type: AppNotification['type'], productId?: string) => void;
 
-  activeModal: 'cart' | 'checkout' | 'compare' | 'alerts' | 'watchlist' | 'admin' | 'guides' | 'pdp' | 'auth' | 'simulator' | null;
+  activeModal: 'cart' | 'checkout' | 'compare' | 'alerts' | 'watchlist' | 'admin' | 'guides' | 'pdp' | 'auth' | 'simulator' | 'logo_suite' | 'workspace' | null;
   setActiveModal: (modal: AppContextType['activeModal']) => void;
   activeProductId: string | null;
   openProductModal: (productId: string) => void;
   simulatorProductId: string | null;
   openSimulatorModal: (productId?: string) => void;
+  workspaceInitialTab: 'drive' | 'gmail' | 'keep';
+  openWorkspaceModal: (tab?: 'drive' | 'gmail' | 'keep') => void;
   closeModals: () => void;
 
   updateProductStock: (productId: string, newStock: number) => void;
@@ -225,6 +227,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeModal, setActiveModal] = useState<AppContextType['activeModal']>(null);
   const [activeProductId, setActiveProductId] = useState<string | null>(null);
   const [simulatorProductId, setSimulatorProductId] = useState<string | null>(null);
+  const [workspaceInitialTab, setWorkspaceInitialTab] = useState<'drive' | 'gmail' | 'keep'>('drive');
 
   // Sync dark class on documentElement
   useEffect(() => {
@@ -613,6 +616,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setActiveModal('simulator');
   };
 
+  const openWorkspaceModal = (tab: 'drive' | 'gmail' | 'keep' = 'drive') => {
+    setWorkspaceInitialTab(tab);
+    setActiveModal('workspace');
+  };
+
   const closeModals = () => {
     setActiveModal(null);
   };
@@ -695,6 +703,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         openProductModal,
         simulatorProductId,
         openSimulatorModal,
+        workspaceInitialTab,
+        openWorkspaceModal,
         closeModals,
         updateProductStock,
         updateProductPrice

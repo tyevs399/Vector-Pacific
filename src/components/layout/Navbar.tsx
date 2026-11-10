@@ -12,7 +12,8 @@ import {
   User,
   SlidersHorizontal,
   Bookmark,
-  Activity
+  Activity,
+  HardDrive
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { CURRENCIES, LANGUAGES } from '../../data/products';
@@ -38,6 +39,7 @@ export const Navbar: React.FC = () => {
     setActiveModal,
     openProductModal,
     openSimulatorModal,
+    openWorkspaceModal,
     currentUser,
     loginAsDemoUser
   } = useApp();
@@ -58,11 +60,16 @@ export const Navbar: React.FC = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="text-lg font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap shrink-0 flex items-center gap-2 group"
+            className="text-lg font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap shrink-0 flex items-center gap-2.5 group"
           >
-            <span className="w-2.5 h-2.5 rounded-sm bg-amber-500 inline-block transform rotate-45 group-hover:rotate-90 transition-transform duration-300" />
-            <span className="font-extrabold tracking-wider font-mono">AETHER</span>
-            <span className="font-light text-slate-500 dark:text-slate-400">HARDWARE</span>
+            <div className="w-6 h-6 rounded-md bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 14l8-8 8 8" />
+                <path d="M12 6v14" />
+              </svg>
+            </div>
+            <span className="font-extrabold tracking-wider font-mono">VECTOR</span>
+            <span className="font-light text-slate-500 dark:text-slate-400">PACIFIC</span>
           </a>
 
           {/* Zone 2: 4–5 clean single-line nav links */}
@@ -104,10 +111,31 @@ export const Navbar: React.FC = () => {
               <SlidersHorizontal className="w-3.5 h-3.5 text-slate-400" />
               <span>{t('nav_admin')}</span>
             </button>
+            <button
+              onClick={() => openWorkspaceModal('drive')}
+              className="hover:text-blue-400 dark:hover:text-blue-300 transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 text-slate-300"
+              title="Google Drive, Gmail, & Keep Hub"
+            >
+              <HardDrive className="w-3.5 h-3.5 text-blue-400" />
+              <span>Workspace</span>
+            </button>
           </nav>
 
           {/* Zone 3: Primary Action & Essential Utilities */}
           <div className="flex items-center gap-3 shrink-0">
+            {/* Google Workspace Hub Trigger */}
+            <button
+              onClick={() => openWorkspaceModal('drive')}
+              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs font-mono flex items-center gap-1.5 transition-colors"
+              title="Google Workspace Hub (Drive, Gmail, Keep)"
+              aria-label="Google Workspace Hub"
+            >
+              <div className="w-3.5 h-3.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/40 flex items-center justify-center font-bold text-[8px]">
+                G
+              </div>
+              <span className="hidden xl:inline text-[11px] font-mono text-slate-300">Workspace</span>
+            </button>
+
             {/* Offline simulator status toggle */}
             <button
               onClick={toggleSimulatedOffline}

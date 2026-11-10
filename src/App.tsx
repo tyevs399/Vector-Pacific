@@ -20,6 +20,7 @@ import { BuyingGuidesModal } from './components/guides/BuyingGuidesModal';
 import { PriceAlertsModal } from './components/alerts/PriceAlertsModal';
 import { WatchlistModal } from './components/watchlist/WatchlistModal';
 import { BenchmarkSimulatorModal } from './components/simulator/BenchmarkSimulatorModal';
+import { LogoIdeasModal } from './components/brand/LogoIdeasModal';
 
 function MainApp() {
   return (
@@ -37,6 +38,7 @@ function MainApp() {
       <ProductDetailModal />
       <SpecMatrixModal />
       <BenchmarkSimulatorModal />
+      <LogoIdeasModal />
       <CartDrawer />
       <CheckoutModal />
       <AdminDashboardModal />

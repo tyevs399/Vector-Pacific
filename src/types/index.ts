@@ -1,4 +1,4 @@
-export type ProductCategory = 'laptops' | 'keyboards' | 'mice' | 'monitors' | 'audio' | 'accessories';
+export type ProductCategory = 'laptops' | 'keyboards' | 'mice' | 'monitors' | 'audio' | 'accessories' | 'sbc' | 'cybersec';
 
 export interface ProductSpecs {
   cpu?: string;
